@@ -4,7 +4,8 @@
   "description": "Calculator in neomorphic style",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir docs"
   },
   "author": "Oleksii Hopchenko",
   "license": "MIT",
@@ -12,5 +13,8 @@
     "mathjs": "^7.1.0",
     "normalize.css": "^8.0.1",
     "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
