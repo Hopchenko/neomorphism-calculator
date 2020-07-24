@@ -9,6 +9,8 @@ body {
     font-size: 16px;
 }
 
+/*Calculator*/
+
 .calculator {
     font-size: 1.5rem;
     padding: 100px 15px 15px;
@@ -75,4 +77,15 @@ body {
 
 .secondary-action {
     color: var(--color-text-secondary);
+}
+
+/*Theme switcher*/
+
+.theme-switcher {
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }

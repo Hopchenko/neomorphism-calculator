@@ -16,7 +16,23 @@
         <link rel="stylesheet" href="styles/main.css" />
         <title>Calculator</title>
     </head>
-    <body class="dark">
+    <body class="light">
+        <div class="theme-switcher">
+            <div>
+                <input
+                    type="radio"
+                    id="radio-light"
+                    name="theme"
+                    value="light"
+                    checked
+                />
+                <label for="radio-light">Light</label>
+            </div>
+            <div>
+                <input type="radio" id="radio-dark" name="theme" value="dark" />
+                <label for="radio-dark">Dark</label>
+            </div>
+        </div>
         <div class="calculator">
             <input type="text" class="calculator-result" />
             <div class="calculator-buttons">
