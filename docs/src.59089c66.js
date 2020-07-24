@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("normalize.css");
 },{"normalize.css":"DOAq"}]},{},["Focm"], null)
-//# sourceMappingURL=https://hopchenko.github.io/neomorphism-calculator/src.59089c66.js.map
+//# sourceMappingURL=docs/src.59089c66.js.map
