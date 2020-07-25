@@ -2,8 +2,8 @@ export const themeControls = document.getElementsByName("theme")
 export const body = document.getElementsByTagName("body")[0]
 
 // Numbers
-const numberButtons = document.getElementsByName("number-button")
-const operationButtons = document.getElementsByName("operation-button")
+export const numberButtons = document.getElementsByName("number-button")
+export const operationButtons = document.getElementsByName("operation-button")
 
 // Operations
 

@@ -1,37 +1,28 @@
 import "normalize.css"
 import {
     themeControls,
-    body,
     acButton,
-    resultInput,
     nonActionButtons,
     equalsButton,
 } from "./controls"
-import { evaluate } from "mathjs"
+
+import {
+    onAllClearClick,
+    onEqualsClick,
+    onNonActionButtonClick,
+    onThemeControlsClick,
+} from "./eventHandlers"
 
 themeControls.forEach((control) => {
-    control.addEventListener("click", (event) => {
-        if (event.target.value === "dark") {
-            body.classList.remove("light")
-            body.classList.add("dark")
-        } else {
-            body.classList.remove("dark")
-            body.classList.add("light")
-        }
-    })
+    control.addEventListener("click", onThemeControlsClick)
 })
 
-acButton.addEventListener("click", (event) => {
-    resultInput.value = ""
-})
+acButton.addEventListener("click", onAllClearClick)
 
 nonActionButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-        resultInput.value += event.target.value
-        resultInput.focus()
+        onNonActionButtonClick(event, button)
     })
 })
 
-equalsButton.addEventListener("click", () => {
-    resultInput.value = evaluate(resultInput.value)
-})
+equalsButton.addEventListener("click", onEqualsClick)
