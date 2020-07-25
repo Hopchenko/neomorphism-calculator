@@ -1,9 +1,15 @@
 import "normalize.css"
+import {
+    themeControls,
+    body,
+    acButton,
+    resultInput,
+    nonActionButtons,
+    equalsButton,
+} from "./controls"
+import { evaluate } from "mathjs"
 
-const themeControls = document.getElementsByName("theme")
-const body = document.getElementsByTagName("body")[0]
-
-themeControls.forEach((control, index) => {
+themeControls.forEach((control) => {
     control.addEventListener("click", (event) => {
         if (event.target.value === "dark") {
             body.classList.remove("light")
@@ -13,4 +19,19 @@ themeControls.forEach((control, index) => {
             body.classList.add("light")
         }
     })
+})
+
+acButton.addEventListener("click", (event) => {
+    resultInput.value = ""
+})
+
+nonActionButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        resultInput.value += event.target.value
+        resultInput.focus()
+    })
+})
+
+equalsButton.addEventListener("click", () => {
+    resultInput.value = evaluate(resultInput.value)
 })
