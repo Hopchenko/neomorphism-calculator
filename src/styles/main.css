@@ -24,6 +24,7 @@ body {
     color: var(--color-text-primary);
     font-size: 40px;
     width: 100%;
+    box-sizing: border-box;
     white-space: nowrap;
     background: none;
     border: none;

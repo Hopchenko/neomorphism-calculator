@@ -4,7 +4,7 @@
     "description": "Calculator in neomorphic style",
     "main": "src/index.js",
     "scripts": {
-        "start": "parcel build ./src/index.html --public-url ./"
+        "build": "parcel build ./src/index.html --out-dir ./docs --public-url ./"
     },
     "author": "Oleksii Hopchenko",
     "license": "MIT",
